@@ -120,6 +120,7 @@ static void wq_func(struct work_struct *data)
 
 }
 
+#if 0
 static void rs_foolproof_slocked(void)
 {
 	unsigned long long cur_ts = rs_get_time();
@@ -136,7 +137,6 @@ static void rs_foolproof_slocked(void)
 	schedule_work(&rs_work);
 }
 
-#if 0
 static void rs_update_io_stat(void *data, long free_mem, long avail_mem,
 		int io_wl, int io_req_r, int io_all_r, int io_reqsz_r, int io_reqc_r,
 		int io_req_w, int io_all_w, int io_reqsz_w, int io_reqc_w,
